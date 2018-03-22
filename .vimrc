@@ -1,4 +1,6 @@
-set tabstop=2 autoindent shiftwidth=2 expandtab number
+set tabstop=4 autoindent shiftwidth=4 expandtab number
+
+"apply plugins
 if empty(glob('~/.vim/autoload/plug.vim'))
   silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
       \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
@@ -6,4 +8,5 @@ if empty(glob('~/.vim/autoload/plug.vim'))
         endif
 call plug#begin('~/.vim/plugged')
 Plug 'rstacruz/vim-closer'
+Plug 'altercation/vim-colors-solarized'
 call plug#end()
