@@ -9,4 +9,7 @@ if empty(glob('~/.vim/autoload/plug.vim'))
 call plug#begin('~/.vim/plugged')
 Plug 'rstacruz/vim-closer'
 Plug 'altercation/vim-colors-solarized'
+Plug 'ervandew/supertab'
+Plug 'davidhalter/jedi-vim'
 call plug#end()
+let g:SuperTabDefaultCompletionType = "context"
