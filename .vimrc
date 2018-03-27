@@ -1,5 +1,5 @@
 set tabstop=4 autoindent shiftwidth=4 expandtab number
-
+set smartcase ignorecase
 "apply plugins
 if empty(glob('~/.vim/autoload/plug.vim'))
   silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
@@ -11,5 +11,11 @@ Plug 'rstacruz/vim-closer'
 Plug 'altercation/vim-colors-solarized'
 Plug 'ervandew/supertab'
 Plug 'davidhalter/jedi-vim'
+Plug 'jelera/vim-javascript-syntax'
 call plug#end()
 let g:SuperTabDefaultCompletionType = "context"
+"Let's learn Vim the hard way, and disable arrow keys in COMMAND
+map <up> <nop>
+map <down> <nop>
+map <right> <nop>
+map <left> <nop>
