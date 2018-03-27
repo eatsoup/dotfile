@@ -19,3 +19,9 @@ map <up> <nop>
 map <down> <nop>
 map <right> <nop>
 map <left> <nop>
+"Custom key shortcuts
+nmap <F2> :set relativenumber! <CR>
+imap <F2> <Esc>:set relativenumber! <CR> i
+"Experimental remap for easy navigating
+nnoremap q b
+nnoremap Q B
