@@ -14,11 +14,11 @@ Plug 'davidhalter/jedi-vim'
 Plug 'jelera/vim-javascript-syntax'
 call plug#end()
 let g:SuperTabDefaultCompletionType = "context"
-"Let's learn Vim the hard way, and disable arrow keys in COMMAND
-map <up> <nop>
-map <down> <nop>
-map <right> <nop>
-map <left> <nop>
+"Let's learn Vim the hard way, and disable arrow keys in NORMAL mode
+nmap <up> <nop>
+nmap <down> <nop>
+nmap <right> <nop>
+nmap <left> <nop>
 "Custom key shortcuts
 nmap <F2> :set relativenumber! <CR>
 imap <F2> <Esc>:set relativenumber! <CR> i
