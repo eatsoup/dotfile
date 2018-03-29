@@ -1,5 +1,6 @@
 set tabstop=4 autoindent shiftwidth=4 expandtab number
 set smartcase ignorecase
+set incsearch
 "apply plugins
 if empty(glob('~/.vim/autoload/plug.vim'))
   silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
