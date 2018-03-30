@@ -21,8 +21,25 @@ nmap <down> <nop>
 nmap <right> <nop>
 nmap <left> <nop>
 "Custom key shortcuts
-nmap <F2> :set relativenumber! <CR>
-imap <F2> <Esc>:set relativenumber! <CR> i
+nmap <F2> :call ToggleNumbers() <CR>
+
+function! ToggleNumbers()
+    if (&relativenumber == 1 && &number == 1)
+        let &relativenumber = 0
+        let &number = 0
+    elseif (&relativenumber == 0 && &number == 1)
+        let &relativenumber = 1
+    elseif (&relativenumber == 0 && &number == 0)
+        let &number = 1
+    endif
+endfunction
+
+
+
+
+nmap <F3> :set invnumber<CR>
+imap <F3> <Esc>:set invnumber <CR>
+
 "Experimental remap for easy navigating
 nnoremap q b
 nnoremap Q B
