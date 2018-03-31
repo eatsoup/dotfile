@@ -13,6 +13,7 @@ Plug 'altercation/vim-colors-solarized'
 Plug 'ervandew/supertab'
 Plug 'davidhalter/jedi-vim'
 Plug 'jelera/vim-javascript-syntax'
+Plug 'scrooloose/nerdtree'
 call plug#end()
 let g:SuperTabDefaultCompletionType = "context"
 "Let's learn Vim the hard way, and disable arrow keys in NORMAL mode
@@ -34,12 +35,11 @@ function! ToggleNumbers()
     endif
 endfunction
 
-
-
-
 nmap <F3> :set invnumber<CR>
 imap <F3> <Esc>:set invnumber <CR>
 
+nmap <c-o> :NERDTreeToggle <CR>
 "Experimental remap for easy navigating
 nnoremap q b
 nnoremap Q B
+nnoremap dq db
