@@ -43,3 +43,9 @@ nmap <c-o> :NERDTreeToggle <CR>
 nnoremap q b
 nnoremap Q B
 nnoremap dq db
+"Easy quotes life
+inoremap "" ""<left>
+inoremap '' ''<left>
+inoremap () ()<left>
+inoremap {} {}<left>
+inoremap [] []<left>
