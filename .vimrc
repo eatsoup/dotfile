@@ -42,6 +42,9 @@ nmap <c-o> :NERDTreeToggle <CR>
 "Experimental remap for easy navigating
 nnoremap q b
 nnoremap Q B
+vnoremap q b
+vnoremap Q B
+
 nnoremap dq db
 "Easy quotes life
 inoremap "" ""<left>
