@@ -14,6 +14,7 @@ Plug 'ervandew/supertab'
 Plug 'davidhalter/jedi-vim'
 Plug 'jelera/vim-javascript-syntax'
 Plug 'scrooloose/nerdtree'
+Plug 'ivanov/vim-ipython'
 call plug#end()
 let g:SuperTabDefaultCompletionType = "context"
 "Let's learn Vim the hard way, and disable arrow keys in NORMAL mode
@@ -52,3 +53,4 @@ inoremap '' ''<left>
 inoremap () ()<left>
 inoremap {} {}<left>
 inoremap [] []<left>
+inoremap <> <><left>
