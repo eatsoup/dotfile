@@ -17,7 +17,7 @@ Plug 'scrooloose/nerdtree'
 Plug 'tpope/vim-surround'
 call plug#end()
 let g:SuperTabDefaultCompletionType = "context"
-source ~/.vim/plugged/vim-ipython/ftplugin/python/ipy.vim
+"source ~/.vim/plugged/vim-ipython/ftplugin/python/ipy.vim
 "Let's learn Vim the hard way, and disable arrow keys in NORMAL mode
 nmap <up> <nop>
 nmap <down> <nop>
