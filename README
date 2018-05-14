@@ -1,5 +1,6 @@
 Git repo for storing configuration files (.vimrc, .tmux.conf and .zshrc)
 Required software:
+                    -Vim
                     -curl
                     -tmux
                     -zsh
