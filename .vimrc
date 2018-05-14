@@ -1,10 +1,9 @@
 set tabstop=4 autoindent shiftwidth=4 expandtab number
 set smartcase ignorecase
 set incsearch
-"apply plugins
+"Apply plugins
 if empty(glob('~/.vim/autoload/plug.vim'))
-  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
-      \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
         autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
         endif
 call plug#begin('~/.vim/plugged')
@@ -14,9 +13,11 @@ Plug 'ervandew/supertab'
 Plug 'davidhalter/jedi-vim'
 Plug 'jelera/vim-javascript-syntax'
 Plug 'scrooloose/nerdtree'
-Plug 'ivanov/vim-ipython'
+"Plug 'ivanov/vim-ipython'
+Plug 'tpope/vim-surround'
 call plug#end()
 let g:SuperTabDefaultCompletionType = "context"
+source ~/.vim/plugged/vim-ipython/ftplugin/python/ipy.vim
 "Let's learn Vim the hard way, and disable arrow keys in NORMAL mode
 nmap <up> <nop>
 nmap <down> <nop>
@@ -54,3 +55,6 @@ inoremap () ()<left>
 inoremap {} {}<left>
 inoremap [] []<left>
 inoremap <> <><left>
+nmap <Leader>' ysiw'
+nmap <Leader>" ysiw"
+set backspace=indent,eol,start
