@@ -13,6 +13,7 @@ Plug 'ervandew/supertab'
 Plug 'davidhalter/jedi-vim'
 Plug 'jelera/vim-javascript-syntax'
 Plug 'scrooloose/nerdtree'
+Plug 'tpope/vim-commentary'
 "Plug 'ivanov/vim-ipython'
 Plug 'tpope/vim-surround'
 call plug#end()
@@ -57,4 +58,5 @@ inoremap [] []<left>
 inoremap <> <><left>
 nmap <Leader>' ysiw'
 nmap <Leader>" ysiw"
+noremap <Leader>/ :Commentary<cr>
 set backspace=indent,eol,start
