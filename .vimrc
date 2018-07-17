@@ -56,6 +56,7 @@ inoremap () ()<left>
 inoremap {} {}<left>
 inoremap [] []<left>
 inoremap <> <><left>
+inoremap <C-a> <right>
 nmap <Leader>' ysiw'
 nmap <Leader>" ysiw"
 noremap <Leader>/ :Commentary<cr>
