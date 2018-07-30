@@ -14,8 +14,9 @@ Plug 'davidhalter/jedi-vim'
 Plug 'jelera/vim-javascript-syntax'
 Plug 'scrooloose/nerdtree'
 Plug 'tpope/vim-commentary'
-"Plug 'ivanov/vim-ipython'
 Plug 'tpope/vim-surround'
+" C Plugins
+Plug 'Valloric/YouCompleteMe/'
 call plug#end()
 let g:SuperTabDefaultCompletionType = "context"
 "source ~/.vim/plugged/vim-ipython/ftplugin/python/ipy.vim
@@ -61,3 +62,17 @@ nmap <Leader>' ysiw'
 nmap <Leader>" ysiw"
 noremap <Leader>/ :Commentary<cr>
 set backspace=indent,eol,start
+
+"Code folding
+" set foldmethod=indent
+
+" C Autocomplete
+set pumheight=20             " so the complete menu doesn't get too big
+set completeopt=menu,longest " menu, menuone, longest and preview
+let g:SuperTabDefaultCompletionType='context'
+let g:clang_complete_auto=0  " I can start the autocompletion myself, thanks..
+let g:clang_snippets=1       " use a snippet engine for placeholders
+let g:clang_snippets_engine='ultisnips'
+let g:clang_auto_select=2    " automatically select and insert the first match
+let g:SuperTabDefaultCompletionType='<c-x><c-u><c-p>'
+let g:ycm_global_ycm_extra_conf='~/.vim/plugged/YouCompleteMe/third_party/ycmd/.ycm_extra_conf.py'
