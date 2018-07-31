@@ -5,4 +5,11 @@ Required software:
                     -tmux
                     -zsh
                     -ohmyzsh
+                    -python
+                    -cmake
                     -thefuck(optional)
+
+
+** Run :PlugInstall in vim to update plugins
+** After installing all Vim plugins, exit vim and execute 
+    'python ~/.vim/plugged/YouCompleteMe/install.py --clang-completer'

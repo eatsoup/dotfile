@@ -1,16 +1,15 @@
-ZSH_TMUX_AUTOSTART=true
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-  if [ -x "$(command -v thefuck)" ]; then
-      export ZSH=/home/luuk/.oh-my-zsh
-  fi
-  eval $(thefuck --alias)
+export ZSH="/home/eatsoup/.oh-my-zsh"
+	if [ -x "$(command -v thefuck)" ]; then
+		eval $(thefuck --alias)
+	fi
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="agnoster-fcamblor"
+ZSH_THEME="agnoster"
 
 # Set list of themes to load
 # Setting this variable when ZSH_THEME=random
@@ -33,7 +32,7 @@ ZSH_THEME="agnoster-fcamblor"
 # export UPDATE_ZSH_DAYS=13
 
 # Uncomment the following line to disable colors in ls.
-# DISABLE_LS_COLORS="true"
+DISABLE_LS_COLORS="true"
 
 # Uncomment the following line to disable auto-setting terminal title.
 # DISABLE_AUTO_TITLE="true"
@@ -63,7 +62,6 @@ ZSH_THEME="agnoster-fcamblor"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
   git
-  tmux
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -96,4 +94,11 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-# python3 ~/stack/python/motd.py &&
+alias irc="ssh kempl@shell.xs4all.nl"
+alias nmap='"/mnt/c/Program Files (x86)/Nmap/nmap.exe"'
+if which tmux 2>&1 >/dev/null; then
+  if [ $TERM != "screen-256color" ] && [  $TERM != "screen" ]; then
+    tmux attach -t TMUX || tmux new -s TMUX; exit
+  fi
+fi
+python3 ~/stack/python/motd.py
