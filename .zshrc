@@ -101,4 +101,4 @@ if which tmux 2>&1 >/dev/null; then
     tmux attach -t TMUX || tmux new -s TMUX; exit
   fi
 fi
-python3 ~/stack/python/motd.py
+# python3 ~/stack/python/motd.py
