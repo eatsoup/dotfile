@@ -22,6 +22,7 @@ Plug 'scrooloose/nerdtree'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-surround'
 Plug 'Valloric/YouCompleteMe/'
+Plug 'christoomey/vim-tmux-navigator'
 call plug#end()
 let g:SuperTabDefaultCompletionType = "context"
 
