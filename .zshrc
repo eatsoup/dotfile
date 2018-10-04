@@ -71,7 +71,9 @@ ZSH_THEME="agnoster-fcamblor"
 plugins=(
   git
   tmux
+  zsh-autosuggestions
 )
+bindkey '^ ' autosuggest-accept
 
 source $ZSH/oh-my-zsh.sh
 
