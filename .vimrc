@@ -19,10 +19,12 @@ Plug 'ervandew/supertab'
 Plug 'davidhalter/jedi-vim'
 Plug 'jelera/vim-javascript-syntax'
 Plug 'scrooloose/nerdtree'
+Plug 'kien/ctrlp.vim'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-surround'
 Plug 'Valloric/YouCompleteMe/'
 Plug 'christoomey/vim-tmux-navigator'
+Plug 'fatih/vim-go'
 call plug#end()
 let g:SuperTabDefaultCompletionType = "context"
 
