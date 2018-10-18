@@ -82,4 +82,7 @@ let g:SuperTabDefaultCompletionType='<c-x><c-u><c-p>'
 let g:ycm_global_ycm_extra_conf='~/.vim/plugged/YouCompleteMe/third_party/ycmd/.ycm_extra_conf.py'
 
 " C Compile and run
-map <F5> :w <CR> :!gcc % -o %< && ./%< <CR>
+" map <F5> :w <CR> :!gcc % -o %< && ./%< <CR>
+
+" Redraw screen
+map <F5> :redraw! <CR>
