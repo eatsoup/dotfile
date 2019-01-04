@@ -3,6 +3,7 @@ Required software:
                     -Vim
                     -curl
                     -tmux
+                    -screen (for arduino serial monitor)
                     -zsh
                     -ohmyzsh
                     -python
