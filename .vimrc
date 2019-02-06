@@ -26,6 +26,7 @@ Plug 'Valloric/YouCompleteMe/'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'stevearc/vim-arduino'
 Plug 'fatih/vim-go'
+Plug 'ekalinin/Dockerfile.vim'
 Plug 'mdempsky/gocode', { 'rtp': 'vim', 'do': '~/.vim/plugged/gocode/vim/symlink.sh' }
 call plug#end()
 let g:SuperTabDefaultCompletionType = "context"
@@ -91,3 +92,4 @@ map <F5> :redraw! <CR>
 
 " Make comments visible in Putty
 set background=dark
+hi Visual term=reverse cterm=reverse guibg=Grey
