@@ -88,3 +88,6 @@ let g:ycm_global_ycm_extra_conf='~/.vim/plugged/YouCompleteMe/third_party/ycmd/.
 
 " Redraw screen
 map <F5> :redraw! <CR>
+
+" Make comments visible in Putty
+set background=dark
