@@ -1,18 +1,2 @@
-Git repo for storing configuration files (.vimrc, .tmux.conf and .zshrc)
-Required software:
-                    -Vim
-                    -curl
-                    -tmux
-                    -screen (for arduino serial monitor)
-                    -zsh
-                    -ohmyzsh
-                    -python
-                    -cmake
-                    -thefuck(optional)
-                    -https://github.com/zsh-users/zsh-autosuggestions
-                        -git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestion
-
-
-** Run :PlugInstall in vim to update plugins
-** After installing all Vim plugins, exit vim and execute 
-    'python ~/.vim/plugged/YouCompleteMe/install.py --clang-completer --go-completer'
+Git repo for storing vim configuration file.
+Minimal version for shared servers
