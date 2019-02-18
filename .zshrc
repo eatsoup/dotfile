@@ -110,3 +110,4 @@ export TERM=xterm-256color
 export PATH=$PATH:$(go env GOPATH)/bin
 export GOPATH=$HOME/go
 stty -ixon
+alias proxy='source ~/git/enable_proxy/proxy.sh'
