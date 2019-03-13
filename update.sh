@@ -1,9 +1,10 @@
 #!/bin/bash
 
-if ( $EUID -eq 0){
+if [ $EUID -eq 0 ]
+then
     echo 'Root detected'
     exit(1)
-}
+fi
 
 # Remove old bash and vimrc
 rm ~/.bashrc -f
