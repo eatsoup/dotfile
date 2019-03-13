@@ -11,3 +11,5 @@ rm ~/.bashrc -f
 rm ~/.vimrc -f
 curl -o ~/.vimrc https://raw.githubusercontent.com/eatsoup/dotfile/server/.vimrc
 curl -o ~/.bashrc https://raw.githubusercontent.com/eatsoup/dotfile/server/.bashrc
+curl -o ~/update.sh https://raw.githubusercontent.com/eatsoup/dotfile/server/update.sh
+chmod +x ~/update.sh
