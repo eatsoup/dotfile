@@ -28,6 +28,7 @@ Plug 'stevearc/vim-arduino'
 Plug 'fatih/vim-go'
 Plug 'ekalinin/Dockerfile.vim'
 Plug 'mdempsky/gocode', { 'rtp': 'vim', 'do': '~/.vim/plugged/gocode/vim/symlink.sh' }
+Plug 'PProvost/vim-ps1'
 call plug#end()
 let g:SuperTabDefaultCompletionType = "context"
 
