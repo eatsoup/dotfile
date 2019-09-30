@@ -7,8 +7,8 @@ ZSH_TMUX_AUTOSTART=true
 # Fuck!
   if [ -x "$(command -v thefuck)" ]; then
       export ZSH=/home/luuk/.oh-my-zsh
+      eval $(thefuck --alias)
   fi
-  eval $(thefuck --alias)
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -77,6 +77,7 @@ bindkey '^ ' autosuggest-accept
 
 source $ZSH/oh-my-zsh.sh
 source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
+#source $ZSH/oh-my-zsh.sh
 
 # User configuration
 

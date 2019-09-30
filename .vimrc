@@ -27,6 +27,7 @@ Plug 'christoomey/vim-tmux-navigator'
 Plug 'stevearc/vim-arduino'
 Plug 'fatih/vim-go'
 Plug 'ekalinin/Dockerfile.vim'
+Plug 'leafgarland/typescript-vim'
 Plug 'mdempsky/gocode', { 'rtp': 'vim', 'do': '~/.vim/plugged/gocode/vim/symlink.sh' }
 Plug 'PProvost/vim-ps1'
 call plug#end()
@@ -73,6 +74,11 @@ inoremap <C-a> <right>
 nmap <Leader>' ysiw'
 nmap <Leader>" ysiw"
 noremap <Leader>/ :Commentary<cr>
+
+" Make comments visible in Putty
+set background=dark
+hi Visual term=reverse cterm=reverse guibg=Grey
+
 
 " C Autocomplete
 set pumheight=20             " so the complete menu doesn't get too big
