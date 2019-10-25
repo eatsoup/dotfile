@@ -108,4 +108,22 @@ source $ZSH/oh-my-zsh.sh
 export TERM=xterm-256color
 export PATH=$PATH:$(go env GOPATH)/bin
 export GOPATH=$HOME/go
+alias python=/usr/bin/python3
+alias python2=/usr/bin/python
+alias pip=/usr/bin/pip3
+alias pip2=/usr/bin/pip
+alias g=git
+alias k=kubectl
+alias kp='kubectl get po --all-namespaces'
+alias pull='git pull'
+alias push='git push'
+alias gcm='git commit -m'
+alias gc='git checkout'
 stty -ixon
+source <(kubectl completion zsh)
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/home/eatsoup/google-cloud-sdk/path.zsh.inc' ]; then . '/home/eatsoup/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/home/eatsoup/google-cloud-sdk/completion.zsh.inc' ]; then . '/home/eatsoup/google-cloud-sdk/completion.zsh.inc'; fi
