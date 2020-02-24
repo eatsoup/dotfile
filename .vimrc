@@ -25,9 +25,10 @@ Plug 'tpope/vim-surround'
 Plug 'Valloric/YouCompleteMe/'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'stevearc/vim-arduino'
-Plug 'fatih/vim-go'
+" Plug 'fatih/vim-go'
 Plug 'ekalinin/Dockerfile.vim'
 Plug 'leafgarland/typescript-vim'
+Plug 'easymotion/vim-easymotion'
 Plug 'mdempsky/gocode', { 'rtp': 'vim', 'do': '~/.vim/plugged/gocode/vim/symlink.sh' }
 Plug 'PProvost/vim-ps1'
 call plug#end()
