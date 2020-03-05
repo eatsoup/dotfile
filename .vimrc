@@ -1,3 +1,5 @@
+scriptencoding utf-8
+set encoding=utf-8
 set tabstop=4 autoindent shiftwidth=4 expandtab number
 set smartcase ignorecase
 set incsearch
@@ -25,11 +27,10 @@ Plug 'tpope/vim-surround'
 Plug 'Valloric/YouCompleteMe/'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'stevearc/vim-arduino'
-" Plug 'fatih/vim-go'
+Plug 'fatih/vim-go'
 Plug 'ekalinin/Dockerfile.vim'
 Plug 'leafgarland/typescript-vim'
 Plug 'easymotion/vim-easymotion'
-Plug 'mdempsky/gocode', { 'rtp': 'vim', 'do': '~/.vim/plugged/gocode/vim/symlink.sh' }
 Plug 'PProvost/vim-ps1'
 call plug#end()
 let g:SuperTabDefaultCompletionType = "context"
@@ -101,3 +102,4 @@ map <F5> :redraw! <CR>
 " Make comments visible in Putty
 set background=dark
 hi Visual term=reverse cterm=reverse guibg=Grey
+let g:go_fmt_command = "goimports"

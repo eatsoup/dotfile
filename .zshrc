@@ -1,12 +1,15 @@
+export GOROOT=/usr/local/go
+export GOPATH=$HOME/go
+export PATH=$GOPATH/bin:$GOROOT/bin:$PATH
 ZSH_TMUX_AUTOSTART=true
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-  export ZSH="/home/luuk/.oh-my-zsh"
+  export ZSH="/home/eatsoup/.oh-my-zsh"
 # Fuck!
   if [ -x "$(command -v thefuck)" ]; then
-      export ZSH=/home/luuk/.oh-my-zsh
+      export ZSH=/home/eatsoup/.oh-my-zsh
       eval $(thefuck --alias)
   fi
 
@@ -14,7 +17,7 @@ ZSH_TMUX_AUTOSTART=true
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="agnoster-fcamblor"
+ZSH_THEME="af-magic"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -76,7 +79,7 @@ plugins=(
 bindkey '^ ' autosuggest-accept
 
 source $ZSH/oh-my-zsh.sh
-source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
+source /home/eatsoup/.oh-my-zsh/custom/plugins/zsh-autosuggestion/zsh-autosuggestions.zsh
 #source $ZSH/oh-my-zsh.sh
 
 # User configuration
@@ -111,5 +114,3 @@ export TERM=xterm-256color
 export PATH=$PATH:$(go env GOPATH)/bin
 export GOPATH=$HOME/go
 stty -ixon
-alias proxy='source ~/git/enable_proxy/proxy.sh'
-alias ls='lsd -la'
