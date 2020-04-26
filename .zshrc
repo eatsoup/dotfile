@@ -106,6 +106,7 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 export TERM=xterm-256color
+export PATH=$PATH:/usr/local/go/bin/
 export PATH=$PATH:$(go env GOPATH)/bin
 export GOPATH=$HOME/go
 alias python=/usr/bin/python3

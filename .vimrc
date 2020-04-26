@@ -25,6 +25,7 @@ Plug 'tpope/vim-surround'
 Plug 'Valloric/YouCompleteMe/'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'stevearc/vim-arduino'
+Plug 'easymotion/vim-easymotion'
 Plug 'fatih/vim-go'
 Plug 'mdempsky/gocode', { 'rtp': 'vim', 'do': '~/.vim/plugged/gocode/vim/symlink.sh' }
 call plug#end()
@@ -53,6 +54,7 @@ nmap <F3> :set invnumber<CR>
 imap <F3> <Esc>:set invnumber <CR>
 nmap <c-o> :NERDTreeToggle <CR>
 
+map <c-i> :tabn<CR>
 "Experimental remap for easy navigating
 nnoremap q b
 nnoremap Q B
@@ -87,4 +89,6 @@ let g:ycm_global_ycm_extra_conf='~/.vim/plugged/YouCompleteMe/third_party/ycmd/.
 " map <F5> :w <CR> :!gcc % -o %< && ./%< <CR>
 
 " Redraw screen
-map <F5> :redraw! <CR>
+" map <F5> :redraw! <CR>
+" Execute on ESP32
+map <F5> :!rshell -p /dev/ttyUSB0 cp % /pyboard/ && rshell -p /dev/ttyUSB0 repl<CR>
