@@ -14,25 +14,30 @@ if empty(glob('~/.vim/autoload/plug.vim'))
 " Apply plugins
 call plug#begin('~/.vim/plugged')
 Plug 'rstacruz/vim-closer'
-Plug 'altercation/vim-colors-solarized'
-Plug 'ervandew/supertab'
-Plug 'davidhalter/jedi-vim'
-Plug 'jelera/vim-javascript-syntax'
+" Plug 'altercation/vim-colors-solarized'
+" Plug 'ervandew/supertab'
+" Plug 'davidhalter/jedi-vim'
+" Plug 'jelera/vim-javascript-syntax'
 Plug 'scrooloose/nerdtree'
 Plug 'kien/ctrlp.vim'
-Plug 'tpope/vim-commentary'
-Plug 'tpope/vim-surround'
+" Plug 'tpope/vim-commentary'
+" Plug 'tpope/vim-surround'
 Plug 'Valloric/YouCompleteMe/'
 Plug 'christoomey/vim-tmux-navigator'
-Plug 'stevearc/vim-arduino'
+" Plug 'stevearc/vim-arduino'
 " Plug 'fatih/vim-go'
 Plug 'ekalinin/Dockerfile.vim'
-Plug 'leafgarland/typescript-vim'
+" Plug 'leafgarland/typescript-vim'
 Plug 'easymotion/vim-easymotion'
-Plug 'mdempsky/gocode', { 'rtp': 'vim', 'do': '~/.vim/plugged/gocode/vim/symlink.sh' }
+" Plug 'mdempsky/gocode', { 'rtp': 'vim', 'do': '~/.vim/plugged/gocode/vim/symlink.sh' }
+Plug 'morhetz/gruvbox'
 Plug 'PProvost/vim-ps1'
 call plug#end()
 let g:SuperTabDefaultCompletionType = "context"
+
+" YCM bindings
+nnoremap <buffer> <silent> <leader>gd :YcmCompleter GoTo<CR>
+nnoremap <buffer> <silent> <leader>gr :YcmCompleter GoToReferences<CR>
 
 "Let's learn Vim the hard way, and disable arrow keys in NORMAL mode
 nmap <up> <nop>
@@ -58,11 +63,13 @@ imap <F3> <Esc>:set invnumber <CR>
 nmap <c-o> :NERDTreeToggle <CR>
 
 "Experimental remap for easy navigating
-nnoremap q b
-nnoremap Q B
-vnoremap q b
-vnoremap Q B
-nnoremap dq db
+" nnoremap q b
+" nnoremap Q B
+" vnoremap q b
+" vnoremap Q B
+" nnoremap dq db
+map <c-i> :tabn<CR>
+inoremap jk <Esc>
 
 "Easy quotes life
 inoremap "" ""<left>
