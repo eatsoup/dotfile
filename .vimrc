@@ -12,11 +12,12 @@ if empty(glob('~/.vim/autoload/plug.vim'))
         endif
 
 " Apply plugins
+autocmd FileType vim let b:vcm_tab_complete = 'vim'
 call plug#begin('~/.vim/plugged')
 Plug 'rstacruz/vim-closer'
-Plug 'altercation/vim-colors-solarized'
+Plug 'morhetz/gruvbox'
 Plug 'ervandew/supertab'
-Plug 'davidhalter/jedi-vim'
+" Plug 'davidhalter/jedi-vim'
 Plug 'jelera/vim-javascript-syntax'
 Plug 'scrooloose/nerdtree'
 Plug 'kien/ctrlp.vim'
@@ -27,9 +28,14 @@ Plug 'christoomey/vim-tmux-navigator'
 Plug 'stevearc/vim-arduino'
 Plug 'easymotion/vim-easymotion'
 Plug 'fatih/vim-go'
-Plug 'mdempsky/gocode', { 'rtp': 'vim', 'do': '~/.vim/plugged/gocode/vim/symlink.sh' }
+" Plug 'mdempsky/gocode', { 'rtp': 'vim', 'do': '~/.vim/plugged/gocode/vim/symlink.sh' }
 call plug#end()
 let g:SuperTabDefaultCompletionType = "context"
+let g:go_fmt_command = "goimports"
+
+" Theme
+autocmd vimenter * colorscheme gruvbox
+set background=dark
 
 "Let's learn Vim the hard way, and disable arrow keys in NORMAL mode
 nmap <up> <nop>
@@ -39,6 +45,7 @@ nmap <left> <nop>
 
 "Custom key shortcuts
 nmap <F2> :call ToggleNumbers() <CR>
+let &relativenumber = 1
 function! ToggleNumbers()
     if (&relativenumber == 1 && &number == 1)
         let &relativenumber = 0
@@ -50,17 +57,16 @@ function! ToggleNumbers()
     endif
 endfunction
 
-nmap <F3> :set invnumber<CR>
-imap <F3> <Esc>:set invnumber <CR>
-nmap <c-o> :NERDTreeToggle <CR>
+"Jump previous location
+nnoremap <Leader>p <c-o>
+nnoremap <Leader>P <c-i>
 
+nnoremap <F3> :set invnumber<CR>
+imap <F3> <Esc>:set invnumber <CR>
+nnoremap <c-o> :NERDTreeToggle <CR>
+
+"Jump next tab
 map <c-i> :tabn<CR>
-"Experimental remap for easy navigating
-nnoremap q b
-nnoremap Q B
-vnoremap q b
-vnoremap Q B
-nnoremap dq db
 
 "Easy quotes life
 inoremap "" ""<left>

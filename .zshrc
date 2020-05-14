@@ -1,3 +1,8 @@
+export TERM=xterm-256color
+export PATH=$PATH:/usr/local/go/bin/
+export PATH=$PATH:$(go env GOPATH)/bin
+export PATH=$PATH:/home/eatsoup/.local/bin/
+export GOPATH=$HOME/go
 ZSH_TMUX_AUTOSTART=true
 source ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 # If you come from bash you might have to change your $PATH.
@@ -105,10 +110,6 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-export TERM=xterm-256color
-export PATH=$PATH:/usr/local/go/bin/
-export PATH=$PATH:$(go env GOPATH)/bin
-export GOPATH=$HOME/go
 alias python=/usr/bin/python3
 alias python2=/usr/bin/python
 alias pip=/usr/bin/pip3
