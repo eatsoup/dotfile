@@ -57,9 +57,20 @@ function! ToggleNumbers()
     endif
 endfunction
 
+" Alt esc
+imap jk <Esc>
+imap kj <Esc>
+
+" Alt leader to space
+let mapleader = " "
+
+" Jump definition and references
+nnoremap <Leader>gd :YcmCompleter GoToDefinition<CR>
+nnoremap <Leader>gr :YcmCompleter GoToReferences<CR>
+
 "Jump previous location
-nnoremap <Leader>p <c-o>
-nnoremap <Leader>P <c-i>
+nnoremap <Leader>b <c-o>
+nnoremap <Leader>n <c-i>
 
 nnoremap <F3> :set invnumber<CR>
 imap <F3> <Esc>:set invnumber <CR>
