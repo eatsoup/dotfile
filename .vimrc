@@ -33,10 +33,6 @@ call plug#end()
 let g:SuperTabDefaultCompletionType = "context"
 let g:go_fmt_command = "goimports"
 
-" Theme
-autocmd vimenter * colorscheme gruvbox
-set background=dark
-
 "Let's learn Vim the hard way, and disable arrow keys in NORMAL mode
 nmap <up> <nop>
 nmap <down> <nop>
@@ -76,6 +72,9 @@ nnoremap <F3> :set invnumber<CR>
 imap <F3> <Esc>:set invnumber <CR>
 nnoremap <c-o> :NERDTreeToggle <CR>
 
+" Annoying :Wq issue
+command Wq :wq <CR>
+
 "Jump next tab
 map <c-i> :tabn<CR>
 
@@ -109,3 +108,15 @@ let g:ycm_global_ycm_extra_conf='~/.vim/plugged/YouCompleteMe/third_party/ycmd/.
 " map <F5> :redraw! <CR>
 " Execute on ESP32
 map <F5> :!rshell -p /dev/ttyUSB0 cp % /pyboard/ && rshell -p /dev/ttyUSB0 repl<CR>
+
+" Theme
+autocmd vimenter * colorscheme gruvbox
+let &background="dark"
+nmap <Leader>bg :call ToggleBackground() <CR>
+function! ToggleBackground()
+    if (&background == "dark")
+        let &background = "light"
+    else
+        let &background = "dark"
+    endif
+endfunction
