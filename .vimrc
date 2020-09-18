@@ -19,6 +19,7 @@ Plug 'morhetz/gruvbox'
 Plug 'ervandew/supertab'
 " Plug 'davidhalter/jedi-vim'
 Plug 'jelera/vim-javascript-syntax'
+Plug 'leafgarland/typescript-vim'
 Plug 'scrooloose/nerdtree'
 Plug 'kien/ctrlp.vim'
 Plug 'tpope/vim-commentary'
@@ -28,6 +29,7 @@ Plug 'christoomey/vim-tmux-navigator'
 Plug 'stevearc/vim-arduino'
 Plug 'easymotion/vim-easymotion'
 Plug 'fatih/vim-go'
+Plug 'martinda/Jenkinsfile-vim-syntax'
 " Plug 'mdempsky/gocode', { 'rtp': 'vim', 'do': '~/.vim/plugged/gocode/vim/symlink.sh' }
 call plug#end()
 let g:SuperTabDefaultCompletionType = "context"
@@ -53,6 +55,9 @@ function! ToggleNumbers()
     endif
 endfunction
 
+" ctrl-p disable node_modules etc.
+let g:ctrlp_custom_ignore = 'node_modules\|DS_Store'
+
 " Alt esc
 imap jk <Esc>
 imap kj <Esc>
@@ -63,6 +68,12 @@ let mapleader = " "
 " Jump definition and references
 nnoremap <Leader>gd :YcmCompleter GoToDefinition<CR>
 nnoremap <Leader>gr :YcmCompleter GoToReferences<CR>
+
+" Just fixit!
+nnoremap <Leader>f :YcmCompleter FixIt<CR>
+
+" Diff before saving
+nnoremap <Leader>d :w !diff % -<CR>
 
 "Jump previous location
 nnoremap <Leader>b <c-o>
