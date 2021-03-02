@@ -89,6 +89,12 @@ command Wq :wq <CR>
 "Jump next tab
 map <c-i> :tabn<CR>
 
+"Map leader y to yank to clipboard
+noremap <Leader>y "+y
+
+"Map leader p to paste from clipboard
+noremap <Leader>p "+p
+
 "Easy quotes life
 inoremap "" ""<left>
 inoremap '' ''<left>
@@ -131,3 +137,9 @@ function! ToggleBackground()
         let &background = "dark"
     endif
 endfunction
+
+function! FormatJson()
+    %!jq .
+    let &syntax = "json"
+endfunction
+noremap <Leader>fj :call FormatJson()<cr>
