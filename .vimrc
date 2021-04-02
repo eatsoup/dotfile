@@ -29,7 +29,6 @@ Plug 'christoomey/vim-tmux-navigator'
 Plug 'stevearc/vim-arduino'
 Plug 'easymotion/vim-easymotion'
 Plug 'fatih/vim-go'
-Plug 'hashivim/vim-terraform'
 Plug 'martinda/Jenkinsfile-vim-syntax'
 " Plug 'mdempsky/gocode', { 'rtp': 'vim', 'do': '~/.vim/plugged/gocode/vim/symlink.sh' }
 call plug#end()
@@ -90,6 +89,12 @@ command Wq :wq <CR>
 "Jump next tab
 map <c-i> :tabn<CR>
 
+"Map leader y to yank to clipboard
+noremap <Leader>y "+y
+
+"Map leader p to paste from clipboard
+noremap <Leader>p "+p
+
 "Easy quotes life
 inoremap "" ""<left>
 inoremap '' ''<left>
@@ -132,3 +137,9 @@ function! ToggleBackground()
         let &background = "dark"
     endif
 endfunction
+
+function! FormatJson()
+    %!jq .
+    let &syntax = "json"
+endfunction
+noremap <Leader>fj :call FormatJson()<cr>
