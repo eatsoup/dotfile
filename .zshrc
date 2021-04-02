@@ -129,3 +129,28 @@ if [ -f '/home/eatsoup/google-cloud-sdk/path.zsh.inc' ]; then . '/home/eatsoup/g
 
 # The next line enables shell command completion for gcloud.
 if [ -f '/home/eatsoup/google-cloud-sdk/completion.zsh.inc' ]; then . '/home/eatsoup/google-cloud-sdk/completion.zsh.inc'; fi
+
+# Custom functions
+
+# Function to check SSL certificate on external site
+# Call as (defaults to port 443): check_ssl site.com
+# Or with port: check_ssl site.com 1443
+# Returns the CN and valid_before and valid_after
+# If http_proxy variable is set, then proxy it through the http_proxy
+check_ssl() {
+    if [ -z $2 ]
+    then
+        __PORT=443
+    else
+        __PORT=$2
+    fi
+    if [ -z $https_proxy ]
+    then
+        echo "Checking certificate for $1:$__PORT"
+        echo | openssl s_client -servername $1 -connect $1:$__PORT 2>/dev/null | openssl x509 -noout -subject -dates
+    else
+        tmp_proxy=$(echo $https_proxy | sed 's/http:\/\///' | sed 's/https:\/\///')
+        echo "Checking certificate for $1:$__PORT via $tmp_proxy"
+        echo | openssl s_client -proxy $tmp_proxy -servername $1 -connect $1:$__PORT 2>/dev/null | openssl x509 -noout -subject -dates
+    fi
+}
