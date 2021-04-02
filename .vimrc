@@ -29,6 +29,7 @@ Plug 'christoomey/vim-tmux-navigator'
 Plug 'stevearc/vim-arduino'
 Plug 'easymotion/vim-easymotion'
 Plug 'fatih/vim-go'
+Plug 'hashivim/vim-terraform'
 Plug 'martinda/Jenkinsfile-vim-syntax'
 " Plug 'mdempsky/gocode', { 'rtp': 'vim', 'do': '~/.vim/plugged/gocode/vim/symlink.sh' }
 call plug#end()
